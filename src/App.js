@@ -4,10 +4,11 @@ import {
   Switch,
   Route
 } from "react-router-dom";
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 //Components
 import Header from './components/Header';
 import ProfileList from './components/ProfileList';
+import ProfileDetail from './components/ProfileDetail';
 
 
 function App() {
@@ -17,6 +18,9 @@ function App() {
         <Switch>
           <Route exact path="/profiles">
               <ProfileList/>
+          </Route>
+          <Route exact path="/profiles/:fullname">
+              <ProfileDetail/>
           </Route>
           <Route path="/">
               <h1>404</h1>
