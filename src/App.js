@@ -16,7 +16,7 @@ function App() {
     <Router>
         <Header/>
         <Switch>
-          <Route exact path="/profiles">
+          <Route exact path="/">
               <ProfileList/>
           </Route>
           <Route exact path="/profiles/:fullname">

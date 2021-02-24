@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { CardDeck } from 'react-bootstrap';
 
 //components
 import ProfileCard from '../ProfileCard';
+import Pagination from '../Pagination';
 
 const ProfileList = () => {
     const [page, setPage] = useState(1);
@@ -15,21 +17,30 @@ const ProfileList = () => {
             });
     }
 
-    useEffect(page => {
-        getProfilesPage(page);
+    useEffect(() => {
+        getProfilesPage(1);
     }, []);
 
+    useEffect(() => {
+        getProfilesPage(page);
+    }, [page]);
+
     return (
-        <div>
-            <h1>Profile list</h1>
-            {
-                profiles.map(profile => (
-                    <ProfileCard
-                    key={profile.cell}
-                    profile = {profile}
-                    />
-                ))
-            }
+        <div className='container pt-5'>
+            <CardDeck>
+                {
+                    profiles.map(profile => (
+                        <ProfileCard
+                            key={profile.cell}
+                            profile={profile}
+                        />
+                    ))
+                }
+            </CardDeck>
+            <Pagination
+                page={page}
+                setPage={setPage}
+            />
         </div>
     );
 }

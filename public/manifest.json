@@ -1,6 +1,0 @@
-{
-  "short_name": "Profile's App",
-  "name": "Profile's app",
-  "start_url": ".",
-  "display": "standalone"
-}

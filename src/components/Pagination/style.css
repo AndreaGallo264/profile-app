@@ -1,0 +1,8 @@
+.current-page{
+    align-self: center;
+}
+
+.pagination-block .btn.first-page, .pagination-block .btn.last-page{
+    color: rgb(194, 189, 189);
+    cursor: auto;
+}
