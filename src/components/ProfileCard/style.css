@@ -1,27 +1,33 @@
 .profile-card{
-    min-width: 15rem;
-    background-color: var(--lightest-color);
-    border-color:var(--darkest-color)
+    min-width: 16rem;
+    background-color: transparent;
+    border: none;
 }
 
 .profile-card .card-body{
     color: var(--darkest-color);
 }
 
-.profile-card .card-footer {
-    align-items: center;
-    background-color: var(--pale-orange);
-    border-top-color: var(--darkest-color);
-    color: var(--darkest-color);
-}
-
 .profile-card a:hover, .profile-card .card-footer:hover{
-    color: var(--dark-orange);
+    color: var(--light);
 }
 
 .flip-card-back img{
     height: 4rem;
     width: 4rem;
+}
+.flip-card-back img:hover{
+    transition: transform 0.2s;
+    transform: scale(1.2);
+}
+
+.flip-card-front img{
+    height: 100%;
+    border: 1px solid var(--darkest-color)
+}
+
+.flip-card-back{
+    border: 1.5px solid var(--darkest-color)
 }
 
 

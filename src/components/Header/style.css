@@ -1,13 +1,13 @@
 .profile-navbar{
-    background-color: var(--pale-orange);
+    background-color: var(--darkest-color);
 }
 
 .profile-navbar .navbar-brand{
-    color: var(--darkest-color);
+    color: var(--lightest-color);
     font-weight: bold;
 }
 
 .profile-navbar .navbar-brand:hover{
-    color: var(--lightest-color);
+    color: var(--pale-orange);
     text-decoration-line: underline;
 }

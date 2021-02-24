@@ -1,41 +1,42 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Card } from 'react-bootstrap';
+import { Card, OverlayTrigger, Tooltip } from 'react-bootstrap';
 import './style.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlus } from '@fortawesome/free-solid-svg-icons';
-
 
 const ProfileCard = ({ profile }) => {
     return (
-        <Card className='profile-card p-2 m-2'>
-            <div className="flip-card p-2">
-                <div className="flip-card-inner">
-                    <div className="flip-card-front">
-                        <Card.Img variant="top" className='rounded-circle' src={profile.picture.large} alt={profile.name.first} />
-                    </div>
-                    <div className="flip-card-back">
-                        <Card.Body>
-                            <Card.Title className='text-center font-weight-bold'>{profile.name.first} {profile.name.last}</Card.Title>
-                            <Card.Text className='text-center'>
-                                {profile.location.city}, {profile.location.country}
-                            </Card.Text>
-                            <Card.Img variant="top" className='rounded-circle mb-2' src={profile.picture.thumbnail} alt={profile.name.first} />
-                        </Card.Body>
-                    </div>
+        <Card className='profile-card m-2 flip-card'>
+            <div className="flip-card-inner">
+                <div className="flip-card-front">
+                    <Card.Img variant="top" src={profile.picture.large} alt={profile.name.first} />
+                </div>
+                <div className="flip-card-back">
+                    <Card.Body>
+                        <Card.Title className='text-center font-weight-bold'>{profile.name.first} {profile.name.last}</Card.Title>
+                        <Card.Text className='text-center'>
+                            {profile.location.city}, {profile.location.country}
+                        </Card.Text>
+                        <Link to={{
+                            pathname: `/profiles/${profile.name.first}${profile.name.last}`,
+                            state: {
+                                profile
+                            }
+                        }}>
+                            <OverlayTrigger
+                                key='bottom'
+                                placement='bottom'
+                                overlay={
+                                    <Tooltip id={`tooltip-bottom`}>
+                                        Go to Details
+                                        </Tooltip>
+                                }>
+                                <Card.Img variant="top" className='rounded-circle mb-2' src={profile.picture.thumbnail} alt={profile.name.first} />
+                            </OverlayTrigger>
+                        </Link>
+                    </Card.Body>
                 </div>
             </div>
-            <Link to={{
-                pathname: `/profiles/${profile.name.first}${profile.name.last}`,
-                state: {
-                    profile
-                }
-            }}>
-                <Card.Footer className='d-flex justify-content-center font-weight-bold'>
-                    <FontAwesomeIcon icon={faPlus} className='mr-3' /> View details
-                </Card.Footer>
-            </Link>
-        </Card>
+        </Card >
     );
 }
 
