@@ -2,7 +2,17 @@
     align-self: center;
 }
 
+.pagination-block, .pagination-block .btn{
+    color: var(--darkest-color);
+    font-size: 1.2rem;
+}
+
+.pagination-block .btn:hover{
+    color: var(--pale-orange);
+}
+
 .pagination-block .btn.first-page, .pagination-block .btn.last-page{
-    color: rgb(194, 189, 189);
+    color: var(--disabled-color);
     cursor: auto;
 }
+

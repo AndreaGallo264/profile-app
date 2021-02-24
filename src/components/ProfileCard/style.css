@@ -1,3 +1,67 @@
 .profile-card{
-    min-width: 20%;
+    min-width: 15rem;
+    background-color: var(--lightest-color);
+    border-color:var(--darkest-color)
 }
+
+.profile-card .card-body{
+    color: var(--darkest-color);
+}
+
+.profile-card .card-footer {
+    align-items: center;
+    background-color: var(--pale-orange);
+    border-top-color: var(--darkest-color);
+    color: var(--darkest-color);
+}
+
+.profile-card a:hover, .profile-card .card-footer:hover{
+    color: var(--dark-orange);
+}
+
+.flip-card-back img{
+    height: 4rem;
+    width: 4rem;
+}
+
+
+/*Flip card css: taken from w3schools*/
+.flip-card{
+    perspective: 1000px;
+    height: 16rem;
+    width: 16rem;
+    background-color: transparent;
+    align-self: center;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+  }
+
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner, .flip-card:focus .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+  
+  
+  /* Style the back side */
+  .flip-card-back {
+    transform: rotateY(180deg);
+    display: flex;
+    align-items: center;
+  }
+  

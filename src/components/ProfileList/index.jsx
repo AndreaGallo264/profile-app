@@ -26,7 +26,11 @@ const ProfileList = () => {
     }, [page]);
 
     return (
-        <div className='container pt-5'>
+        <div className='container pt-3'>
+            <Pagination
+                page={page}
+                setPage={setPage}
+            />
             <CardDeck>
                 {
                     profiles.map(profile => (

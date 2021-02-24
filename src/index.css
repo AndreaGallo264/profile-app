@@ -1,1 +1,12 @@
+#root{
+    background-color: var(--lightest-color);
+    min-height: 100vh;
+}
 
+:root {
+    --darkest-color: #763857;
+    --lightest-color: #fcf8e8;
+    --dark-orange: #df7861;
+    --pale-orange: #ecb390;
+    --disabled-color: #d4e2d4;
+}

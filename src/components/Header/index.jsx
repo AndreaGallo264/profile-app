@@ -1,16 +1,16 @@
 import React from 'react';
 import { Navbar, Nav } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import './style.css';
 
 const Header = () => {
     return (
-        <Navbar bg="light" expand="lg">
-            <Navbar.Brand>Profile's app</Navbar.Brand>
+        <Navbar className='profile-navbar' expand="lg">
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mr-auto">
                     <Link to='/'>
-                        <Navbar.Brand>Home</Navbar.Brand>
+                        <Navbar.Brand>Profile's page</Navbar.Brand>
                     </Link>
                 </Nav>
             </Navbar.Collapse>
