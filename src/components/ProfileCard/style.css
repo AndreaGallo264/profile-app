@@ -15,6 +15,7 @@
 .flip-card-back img{
     height: 4rem;
     width: 4rem;
+    border: 2px solid var(--darkest-color)
 }
 .flip-card-back img:hover{
     transition: transform 0.2s;
@@ -23,7 +24,7 @@
 
 .flip-card-front img{
     height: 100%;
-    border: 1px solid var(--darkest-color)
+    border: 1px solid var(--darkest-color);
 }
 
 .flip-card-back{

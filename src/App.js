@@ -1,9 +1,12 @@
 import React from "react";
+import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import {
   BrowserRouter as Router,
   Switch,
-  Route
+  Route,
+  withRouter
 } from "react-router-dom";
+
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 //Components
@@ -13,20 +16,33 @@ import ProfileDetail from './components/ProfileDetail';
 
 
 function App() {
-  return (
-    <Router>
-        <Header/>
-        <Switch>
+
+  const AnimatedSwitch = withRouter(({ location }) => (
+    <TransitionGroup>
+      <CSSTransition
+        key={location.key}
+        classNames="page"
+        timeout={1000}
+      >
+        <Switch location={location}>
           <Route exact path="/">
-              <ProfileList/>
+            <ProfileList />
           </Route>
           <Route exact path="/profiles/:fullname">
-              <ProfileDetail/>
+            <ProfileDetail />
           </Route>
           <Route path="/">
-              <h1>404</h1>
+            <h1>404</h1>
           </Route>
         </Switch>
+      </CSSTransition>
+    </TransitionGroup>
+  ));
+
+  return (
+    <Router>
+      <Header />
+      <AnimatedSwitch />
     </Router>
   );
 }

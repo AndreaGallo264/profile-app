@@ -26,7 +26,7 @@ const ProfileList = () => {
     }, [page]);
 
     return (
-        <div className='container pt-3'>
+        <div className='container py-3'>
             <Pagination
                 page={page}
                 setPage={setPage}

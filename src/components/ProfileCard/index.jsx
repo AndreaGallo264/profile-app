@@ -16,7 +16,7 @@ const ProfileCard = ({ profile }) => {
                         <Card.Text className='text-center'>
                             {profile.location.city}, {profile.location.country}
                         </Card.Text>
-                        <Link to={{
+                        <Link activeClassName="active" to={{
                             pathname: `/profiles/${profile.name.first}${profile.name.last}`,
                             state: {
                                 profile
@@ -27,7 +27,7 @@ const ProfileCard = ({ profile }) => {
                                 placement='bottom'
                                 overlay={
                                     <Tooltip id={`tooltip-bottom`}>
-                                        Go to Details
+                                        Click for more info
                                         </Tooltip>
                                 }>
                                 <Card.Img variant="top" className='rounded-circle mb-2' src={profile.picture.thumbnail} alt={profile.name.first} />
