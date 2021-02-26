@@ -33,7 +33,7 @@ function App() {
           </Route>
           <Route path="/">
             <Error
-              errMsg={"Page Not Found. Go Home!"}
+              errorMsg={"You seem lost, please go Home"}
             />
           </Route>
         </Switch>

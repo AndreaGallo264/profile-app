@@ -1,0 +1,15 @@
+.error-btn{
+    color: var(--lightest-color);
+    background-color: var(--darkest-color);
+    border: none;
+    text-transform: uppercase;
+}
+
+.error-btn:hover{
+    background-color: var(--pale-orange);
+    color: var(--darkest-color);
+}
+
+.error-message{
+    color: var(--darkest-color);
+}

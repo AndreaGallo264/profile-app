@@ -20,14 +20,12 @@ const ProfileList = () => {
         await axios.get(`https://randomuser.me/api/?page=${page}&results=20&seed=abc`)
             .then(response => {
                 setProfiles(response.data.results);
-                setTimeout(() => {
-                    setLoader(false); 
-                }, 1000);
+                setLoader(false); 
             })
             .catch(e => {
                 setHasError(true);
-                console.log(e);
-                setErrorMsg("Try again. Go home!");
+                setErrorMsg("We are sorry. Something is broken");
+                setLoader(false); 
             })
 
     }
