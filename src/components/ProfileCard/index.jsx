@@ -28,7 +28,7 @@ const ProfileCard = ({ profile }) => {
                                 overlay={
                                     <Tooltip id={`tooltip-bottom`}>
                                         Click for more info
-                                        </Tooltip>
+                                    </Tooltip>
                                 }>
                                 <Card.Img variant="top" className='rounded-circle mb-2' src={profile.picture.thumbnail} alt={profile.name.first} />
                             </OverlayTrigger>
