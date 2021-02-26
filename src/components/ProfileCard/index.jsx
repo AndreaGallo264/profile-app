@@ -16,7 +16,7 @@ const ProfileCard = ({ profile }) => {
                         <Card.Text className='text-center'>
                             {profile.location.city}, {profile.location.country}
                         </Card.Text>
-                        <Link activeClassName="active" to={{
+                        <Link to={{
                             pathname: `/profiles/${profile.name.first}${profile.name.last}`,
                             state: {
                                 profile

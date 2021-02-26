@@ -1,0 +1,14 @@
+.profile-detail-card{
+    background-color: var(--lightest-color);
+    border: 2px solid var(--darkest-color)
+}
+
+.profile-detail-data{
+    color: var(--darkest-color);
+    font-size: 1.5rem;
+}
+
+.header-profile-detail{
+    color: var(--lightest-color);
+    background-color:  var(--darkest-color);
+}

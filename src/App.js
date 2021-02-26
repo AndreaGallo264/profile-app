@@ -6,14 +6,14 @@ import {
   Route,
   withRouter
 } from "react-router-dom";
-
+//Css styles
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 //Components
 import Header from './components/Header';
 import ProfileList from './components/ProfileList';
 import ProfileDetail from './components/ProfileDetail';
-
+import Error from './components/Error';
 
 function App() {
 
@@ -24,15 +24,17 @@ function App() {
         classNames="page"
         timeout={1000}
       >
-        <Switch location={location}>
+        <Switch location={location} >
           <Route exact path="/">
-            <ProfileList />
+            <ProfileList/>
           </Route>
           <Route exact path="/profiles/:fullname">
             <ProfileDetail />
           </Route>
           <Route path="/">
-            <h1>404</h1>
+            <Error
+              errMsg={"Page Not Found. Go Home!"}
+            />
           </Route>
         </Switch>
       </CSSTransition>
