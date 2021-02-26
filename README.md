@@ -5,5 +5,4 @@ To run the proyect for the very first time:
 4- Run the app (npm start)
 5- Enjoy!
 
-If you don't want to download the proyect, you can try it on Heroku:
-""
+If you don't want to download the proyect, you can try it on Heroku
